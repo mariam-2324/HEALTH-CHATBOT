@@ -10,10 +10,10 @@ load_dotenv()
 api_key = os.getenv('ANTHROPIC_API_KEY')
 
 # Use the API key in your code
-client = anthropic.Anthropic(api_key=api_key)
+client = anthropic.Client(api_key=api_key)
 
 # Function to call Claude AI API and get a personalized meal plan
-def get_meal_plan(genai_key, fasting_sugar, pre_meal_sugar, post_meal_sugar, dietary_preferences):
+def get_meal_plan(api_key, fasting_sugar, pre_meal_sugar, post_meal_sugar, dietary_preferences):
     # Initialize the Claude AI client with the provided API key
     
     
